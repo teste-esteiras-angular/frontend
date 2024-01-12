@@ -28,9 +28,8 @@ jobs:
       uses: actions/checkout@master
 
     # Setup gcloud CLI
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+    - uses: GoogleCloudPlatform/google-github-actions/setup-gcloud@v2
       with:
-        version: '270.0.0'
         service_account_email: ${{ secrets.GKE_EMAIL }}
         service_account_key: ${{ secrets.GKE_KEY }}
 
