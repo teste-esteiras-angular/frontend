@@ -39,10 +39,6 @@ jobs:
         # Set up docker to authenticate
         # via gcloud command-line tool.
         gcloud auth configure-docker
-    # Setup .env file
-    - name: Setup .env file
-      run: |
-        echo GIPHY_API_KEY=${{ secrets.GIPHY_API }} > cmd/.env
     # Build the Docker image
     - name: Build
       run: |
